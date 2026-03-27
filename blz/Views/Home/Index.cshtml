@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    
+
+    <h1>Counter: @ViewBag.Count</h1>
+    <form asp-controller = "Home" asp-action="Knapp" method="post">
+        <button>to knapp!</button>
+    </form>
+</div>
