@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rVM3GPRW3nE=",
+  "dgSpecHash": "cVdmM1Sk9J0=",
   "success": true,
-  "projectFilePath": "/home/sivert/repos/bdi/bdi/BDI/BDI.csproj",
+  "projectFilePath": "/home/sivert/repos/bdi/bdi/BDI/BDI/BDI.csproj",
   "expectedPackageFiles": [
     "/home/sivert/.nuget/packages/microsoft.aspnetcore.app.internal.assets/10.0.7/microsoft.aspnetcore.app.internal.assets.10.0.7.nupkg.sha512"
   ],

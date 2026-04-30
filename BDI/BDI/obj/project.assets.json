@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/sivert/repos/bdi/bdi/BDI/BDI.csproj",
+      "projectUniqueName": "/home/sivert/repos/bdi/bdi/BDI/BDI/BDI.csproj",
       "projectName": "BDI",
-      "projectPath": "/home/sivert/repos/bdi/bdi/BDI/BDI.csproj",
+      "projectPath": "/home/sivert/repos/bdi/bdi/BDI/BDI/BDI.csproj",
       "packagesPath": "/home/sivert/.nuget/packages/",
-      "outputPath": "/home/sivert/repos/bdi/bdi/BDI/obj/",
+      "outputPath": "/home/sivert/repos/bdi/bdi/BDI/BDI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/sivert/.nuget/NuGet/NuGet.Config"
