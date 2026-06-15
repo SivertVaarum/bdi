@@ -1,0 +1,18 @@
+@page "/notes"
+@rendermode InteractiveServer
+@using bdi.Components
+
+<h1>notes</h1>
+
+<Editor EditorId="my-editor"/>
+
+<div class="editor-wrapper">
+    <button class="btn btn-danger" @onclick="TestClick">Click Me: @testCounter</button>
+</div>
+
+@code {
+    private int testCounter = 0;
+    private void TestClick() => testCounter++;
+    
+    // ... leave your other code below
+}

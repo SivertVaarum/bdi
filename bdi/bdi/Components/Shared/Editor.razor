@@ -1,0 +1,37 @@
+@inject IJSRuntime jSRuntime
+@rendermode InteractiveServer
+@implements IAsyncDisposable
+
+<div class = "editor-wrapper">
+    <div id="@EditorId" class="notion-editor">Hello</div>
+</div>
+
+@code{
+    [Parameter] public string EditorId {get; set;} = "editorjs-default";
+    [Parameter] public string InitalDataJson {get; set;} 
+
+    private bool _isInitalized = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender){
+        if (firstRender){
+            try {
+                await jSRuntime.InvokeVoidAsync("editorInterop.init", EditorId, InitalDataJson);
+                _isInitalized = true;
+            } catch (Exception ex) {
+                Console.Error.WriteLine($"EditorJS init failed: {ex.Message}");
+            }
+        }
+    }
+    public async Task<string> getContentJson(){
+        if(_isInitalized){
+            return await jSRuntime.InvokeAsync<string>("editorInterop.save");
+        }   
+        return null;
+    }
+    public async ValueTask DisposeAsync(){
+        try{
+            await jSRuntime.InvokeVoidAsync("editorInterop.instance.destroy");
+        }
+        catch {}
+    }
+} 
